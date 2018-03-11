@@ -10,7 +10,7 @@
 
   :source-paths ["src/clj"]
   :uberjar-name "shadertest-standalone.jar"
-  :hooks [environ.leiningen.hooks]
+  :hooks [environ.leiningen.hooks leiningen.cljsbuild]
   :min-lein-version "2.7.1"
   :plugins [[lein-cljsbuild "1.1.7"]
             [environ/environ.lein "0.3.1"]]
