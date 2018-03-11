@@ -10,11 +10,13 @@
 
   :source-paths ["src/clj"]
   :uberjar-name "shadertest-standalone.jar"
-  :hooks [environ.leiningen.hooks leiningen.cljsbuild]
+
   :min-lein-version "2.7.1"
   :plugins [[lein-cljsbuild "1.1.7"]
             [environ/environ.lein "0.3.1"]]
-
+  :hooks [environ.leiningen.hooks
+          ;;leiningen.cljsbuild
+          ]
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "resources/public/js/out" "target" "test/js"]
 
   :cljsbuild {:builds [{:id "dev"
@@ -25,4 +27,4 @@
                                    :asset-path "/public/js/compiled/out"
                                    :optimizations :none
                                    :pretty-print true}}]}
-  profiles {:production {:env {:production true}}})
+  :profiles {:production {:env {:production true}}})
