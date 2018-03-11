@@ -1,4 +1,4 @@
-(ns shader.web
+(ns shadertest.web
   (:gen-class)
   (:require [compojure.handler :refer [site]]
             [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
